@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试结果 - 艺术人格测试</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/art-test.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="assets/js/art-questions.js"></script>
+    <script src="assets/js/art-scoring.js"></script>
+</head>
+<body>
+    <div class="container result-container">
+        <section class="result-header">
+            <h1 class="result-title">你的艺术人格</h1>
+        </section>
+
+        <section class="personality-section">
+            <div class="personality-card" id="personalityCard">
+                <div class="personality-emoji" id="personalityEmoji">🐬</div>
+                <div class="personality-code" id="personalityCode">ZPTR</div>
+                <div class="personality-name" id="personalityName">好奇海豚</div>
+                <div class="personality-tagline" id="personalityTagline">什么都听、什么都说好、跟谁都能聊，最恨分类标签</div>
+            </div>
+        </section>
+
+        <section class="description-section">
+            <div class="description-card">
+                <p class="description-text" id="descriptionText">你是艺术世界里的探险家，对一切新鲜事物充满好奇。</p>
+            </div>
+        </section>
+
+        <section class="dimensions-section">
+            <h2 class="section-title">四维解析</h2>
+            <div class="dimensions-result">
+                <div class="dimension-result-item" id="dimDifferentiation">
+                    <div class="dimension-header">
+                        <span class="dimension-icon">🍽️</span>
+                        <span class="dimension-name">菜单广度</span>
+                    </div>
+                    <div class="dimension-bar-container">
+                        <div class="dimension-labels">
+                            <span class="label-left">杂食派 Z</span>
+                            <span class="label-right">专食派 S</span>
+                        </div>
+                        <div class="dimension-bar">
+                            <div class="dimension-indicator" id="indicatorDifferentiation"></div>
+                        </div>
+                    </div>
+                    <div class="dimension-result-text" id="textDifferentiation">杂食派：涉猎极广，对新类型持开放态度</div>
+                </div>
+
+                <div class="dimension-result-item" id="dimHierarchy">
+                    <div class="dimension-header">
+                        <span class="dimension-icon">📊</span>
+                        <span class="dimension-name">品味阶梯</span>
+                    </div>
+                    <div class="dimension-bar-container">
+                        <div class="dimension-labels">
+                            <span class="label-left">平权派 P</span>
+                            <span class="label-right">阶梯派 J</span>
+                        </div>
+                        <div class="dimension-bar">
+                            <div class="dimension-indicator" id="indicatorHierarchy"></div>
+                        </div>
+                    </div>
+                    <div class="dimension-result-text" id="textHierarchy">平权派：认为所有艺术形式价值平等</div>
+                </div>
+
+                <div class="dimension-result-item" id="dimUniversality">
+                    <div class="dimension-header">
+                        <span class="dimension-icon">🌐</span>
+                        <span class="dimension-name">圈层意识</span>
+                    </div>
+                    <div class="dimension-bar-container">
+                        <div class="dimension-labels">
+                            <span class="label-left">通识派 T</span>
+                            <span class="label-right">黑话派 H</span>
+                        </div>
+                        <div class="dimension-bar">
+                            <div class="dimension-indicator" id="indicatorUniversality"></div>
+                        </div>
+                    </div>
+                    <div class="dimension-result-text" id="textUniversality">通识派：消费的文化内容大众熟悉</div>
+                </div>
+
+                <div class="dimension-result-item" id="dimBoundary">
+                    <div class="dimension-header">
+                        <span class="dimension-icon">🔀</span>
+                        <span class="dimension-name">跨界容忍</span>
+                    </div>
+                    <div class="dimension-bar-container">
+                        <div class="dimension-labels">
+                            <span class="label-left">熔炉派 R</span>
+                            <span class="label-right">洁癖派 C</span>
+                        </div>
+                        <div class="dimension-bar">
+                            <div class="dimension-indicator" id="indicatorBoundary"></div>
+                        </div>
+                    </div>
+                    <div class="dimension-result-text" id="textBoundary">熔炉派：乐于看到跨界融合</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="analysis-section">
+            <h2 class="section-title">人格分析</h2>
+            <div class="analysis-grid">
+                <div class="analysis-card traits-card">
+                    <h3 class="analysis-title">✨ 性格特征</h3>
+                    <ul class="analysis-list" id="traitsList">
+                        <li>开放包容</li>
+                        <li>好奇心强</li>
+                    </ul>
+                </div>
+                <div class="analysis-card strengths-card">
+                    <h3 class="analysis-title">💪 优势</h3>
+                    <ul class="analysis-list" id="strengthsList">
+                        <li>能快速发现新内容</li>
+                        <li>社交圈广泛</li>
+                    </ul>
+                </div>
+                <div class="analysis-card weaknesses-card">
+                    <h3 class="analysis-title">⚠️ 潜在局限</h3>
+                    <ul class="analysis-list" id="weaknessesList">
+                        <li>可能缺乏深度</li>
+                        <li>容易分散精力</li>
+                    </ul>
+                </div>
+                <div class="analysis-card recommendations-card">
+                    <h3 class="analysis-title">💡 建议</h3>
+                    <ul class="analysis-list" id="recommendationsList">
+                        <li>保持你的开放心态</li>
+                        <li>尝试建立几个深耕领域</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="all-types-section">
+            <h2 class="section-title">16种艺术人格速查</h2>
+            <div class="all-types-grid" id="allTypesGrid">
+            </div>
+        </section>
+
+        <section class="action-section">
+            <div class="action-buttons">
+                <button class="btn btn-primary" onclick="shareResult()">分享结果</button>
+                <button class="btn btn-outline" onclick="retakeTest()">重新测试</button>
+                <button class="btn btn-secondary" onclick="goHome()">返回首页</button>
+            </div>
+        </section>
+
+        <section class="disclaimer-section">
+            <div class="disclaimer">
+                <div class="disclaimer-title">免责声明</div>
+                <p>本测试基于迪马乔艺术分类系统开发，仅供娱乐和自我探索，不构成专业心理评估。测试结果基于用户自陈回答，可能受到多种因素影响，不应作为任何形式的诊断或决策依据。</p>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-text">艺术人格测试 &copy; 2026</p>
+            <p class="footer-text">基于迪马乔艺术分类系统</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const result = localStorage.getItem('art_test_result');
+            
+            if (result) {
+                const data = JSON.parse(result);
+                displayResult(data);
+            } else {
+                displayDefaultResult();
+            }
+            
+            displayAllTypes();
+        });
+
+        function displayResult(data) {
+            const personality = data.personality;
+            
+            if (personality) {
+                document.getElementById('personalityEmoji').textContent = personality.emoji;
+                document.getElementById('personalityCode').textContent = personality.code;
+                document.getElementById('personalityName').textContent = personality.name;
+                document.getElementById('personalityTagline').textContent = personality.tagline;
+                document.getElementById('descriptionText').textContent = personality.description;
+                
+                const card = document.getElementById('personalityCard');
+                card.style.setProperty('--personality-color', personality.color);
+                
+                document.getElementById('traitsList').innerHTML = personality.traits.map(t => `<li>${t}</li>`).join('');
+                document.getElementById('strengthsList').innerHTML = personality.strengths.map(s => `<li>${s}</li>`).join('');
+                document.getElementById('weaknessesList').innerHTML = personality.weaknesses.map(w => `<li>${w}</li>`).join('');
+                document.getElementById('recommendationsList').innerHTML = personality.recommendations.map(r => `<li>${r}</li>`).join('');
+            }
+            
+            displayDimensions(data.dimensions, data.scores);
+        }
+
+        function displayDimensions(dimensions, scores) {
+            const dimensionMap = {
+                differentiation: { indicator: 'indicatorDifferentiation', text: 'textDifferentiation' },
+                hierarchy: { indicator: 'indicatorHierarchy', text: 'textHierarchy' },
+                universality: { indicator: 'indicatorUniversality', text: 'textUniversality' },
+                boundary: { indicator: 'indicatorBoundary', text: 'textBoundary' }
+            };
+            
+            for (const [key, dim] of Object.entries(dimensions)) {
+                const indicator = document.getElementById(dimensionMap[key].indicator);
+                const textEl = document.getElementById(dimensionMap[key].text);
+                
+                const maxScore = 3;
+                const normalizedScore = (dim.score / maxScore) * 50;
+                let position;
+                
+                if (dim.direction === 'left') {
+                    position = 50 - normalizedScore;
+                } else {
+                    position = 50 + normalizedScore;
+                }
+                
+                position = Math.max(5, Math.min(95, position));
+                indicator.style.left = `${position}%`;
+                
+                textEl.textContent = `${dim.name}：${dim.description}`;
+            }
+        }
+
+        function displayDefaultResult() {
+            const defaultPersonality = artScoring.personalityTypes['ZPTR'];
+            
+            document.getElementById('personalityEmoji').textContent = defaultPersonality.emoji;
+            document.getElementById('personalityCode').textContent = defaultPersonality.code;
+            document.getElementById('personalityName').textContent = defaultPersonality.name;
+            document.getElementById('personalityTagline').textContent = defaultPersonality.tagline;
+            document.getElementById('descriptionText').textContent = defaultPersonality.description;
+            
+            document.getElementById('traitsList').innerHTML = defaultPersonality.traits.map(t => `<li>${t}</li>`).join('');
+            document.getElementById('strengthsList').innerHTML = defaultPersonality.strengths.map(s => `<li>${s}</li>`).join('');
+            document.getElementById('weaknessesList').innerHTML = defaultPersonality.weaknesses.map(w => `<li>${w}</li>`).join('');
+            document.getElementById('recommendationsList').innerHTML = defaultPersonality.recommendations.map(r => `<li>${r}</li>`).join('');
+        }
+
+        function displayAllTypes() {
+            const grid = document.getElementById('allTypesGrid');
+            const types = artScoring.personalityTypes;
+            
+            let html = '';
+            for (const [code, type] of Object.entries(types)) {
+                html += `
+                    <div class="type-item" style="--type-color: ${type.color}">
+                        <span class="type-emoji">${type.emoji}</span>
+                        <span class="type-name">${type.name}</span>
+                        <span class="type-code">${code}</span>
+                    </div>
+                `;
+            }
+            grid.innerHTML = html;
+        }
+
+        function shareResult() {
+            const code = document.getElementById('personalityCode').textContent;
+            const name = document.getElementById('personalityName').textContent;
+            const message = `我的艺术人格测试结果是 ${code}「${name}」！来探索你的艺术品味DNA吧！`;
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: '艺术人格测试结果',
+                    text: message,
+                    url: window.location.origin + '/art-index.html'
+                });
+            } else {
+                navigator.clipboard.writeText(message + ' ' + window.location.origin + '/art-index.html').then(() => {
+                    alert('结果已复制到剪贴板！');
+                });
+            }
+        }
+
+        function retakeTest() {
+            if (confirm('确定要重新测试吗？当前结果将被清除。')) {
+                localStorage.removeItem('art_test_result');
+                localStorage.removeItem('art_test_progress');
+                window.location.href = 'art-test.html';
+            }
+        }
+
+        function goHome() {
+            window.location.href = 'art-index.html';
+        }
+    </script>
+</body>
+</html>

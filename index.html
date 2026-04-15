@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI产品经理面试能力雷达</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- 英雄区域 -->
+        <section class="hero-section">
+            <h1 class="hero-title">AI产品经理面试能力雷达</h1>
+            <p class="hero-subtitle">5-10分钟全面测评，发现你的强弱项，获得个性化学习建议</p>
+            <button class="btn btn-primary start-btn" onclick="window.location.href='test.html'">开始测评</button>
+        </section>
+
+        <!-- 能力维度介绍 -->
+        <section class="mt-6">
+            <h2 class="text-center">能力维度</h2>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                <!-- 产品思维 -->
+                <div class="card">
+                    <div class="test-icon">📱</div>
+                    <h3 class="card-title">产品思维</h3>
+                    <p class="text-muted">需求分析/规划/PRD/用户价值</p>
+                </div>
+                <!-- AI技术理解 -->
+                <div class="card">
+                    <div class="test-icon">🤖</div>
+                    <h3 class="card-title">AI技术理解</h3>
+                    <p class="text-muted">大模型原理/RAG/提示词/边界</p>
+                </div>
+                <!-- 数据分析 -->
+                <div class="card">
+                    <div class="test-icon">📊</div>
+                    <h3 class="card-title">数据分析</h3>
+                    <p class="text-muted">指标/SQL/AB测试/决策</p>
+                </div>
+                <!-- 沟通表达 -->
+                <div class="card">
+                    <div class="test-icon">💬</div>
+                    <h3 class="card-title">沟通表达</h3>
+                    <p class="text-muted">逻辑/结构化/说服力</p>
+                </div>
+                <!-- 项目管理 -->
+                <div class="card">
+                    <div class="test-icon">📋</div>
+                    <h3 class="card-title">项目管理</h3>
+                    <p class="text-muted">敏捷/协作/版本规划</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 测评流程 -->
+        <section class="mt-6">
+            <h2 class="text-center">测评流程</h2>
+            <div class="card">
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-4 text-center">
+                    <div>
+                        <div class="test-icon">👋</div>
+                        <h4 class="text-secondary">欢迎页</h4>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <div class="arrow">→</div>
+                    </div>
+                    <div>
+                        <div class="test-icon">📝</div>
+                        <h4 class="text-secondary">选择题</h4>
+                        <p class="text-muted">10题</p>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <div class="arrow">→</div>
+                    </div>
+                    <div>
+                        <div class="test-icon">💬</div>
+                        <h4 class="text-secondary">对话</h4>
+                        <p class="text-muted">2-3轮</p>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <div class="arrow">→</div>
+                    </div>
+                    <div>
+                        <div class="test-icon">📈</div>
+                        <h4 class="text-secondary">报告页</h4>
+                        <p class="text-muted">雷达图+评分</p>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <div class="arrow">→</div>
+                    </div>
+                    <div>
+                        <div class="test-icon">🔄</div>
+                        <h4 class="text-secondary">深度对话</h4>
+                        <p class="text-muted">可选</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 免责声明 -->
+        <section class="mt-6">
+            <div class="disclaimer">
+                <div class="disclaimer-title">免责声明</div>
+                <p>本测试仅供参考，不构成专业评估。测试结果基于用户自陈回答和AI分析，可能受到多种因素影响，不应作为任何形式的决策依据。</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-text">AI产品经理面试能力雷达 &copy; 2026</p>
+            <p class="footer-text">基于智谱GLM-4系列模型</p>
+            <p class="footer-text">设计：AI产品团队 | 技术：Trae IDE</p>
+        </div>
+    </footer>
+
+    <script>
+        // 入口页面交互
+        document.addEventListener('DOMContentLoaded', function() {
+            // 添加卡片点击效果
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px)';
+                    this.style.boxShadow = '0 12px 24px rgba(0,0,0,0.15)';
+                });
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = '0 4px 8px rgba(0,0,0,0.1)';
+                });
+            });
+
+            // 添加开始按钮呼吸动画
+            const startBtn = document.querySelector('.start-btn');
+            startBtn.classList.add('breathing');
+        });
+    </script>
+</body>
+</html>
